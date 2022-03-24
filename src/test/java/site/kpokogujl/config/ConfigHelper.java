@@ -14,9 +14,9 @@ public class ConfigHelper {
         return getConfig().browserstackPassword();
     }
 
-    public static String browsesrstackUrl() {
+    public static String browserstackUrl() {
 
-        return getConfig().browsesrstackUrl();
+        return getConfig().browserstackUrl();
     }
 
     public static String appUrl() {

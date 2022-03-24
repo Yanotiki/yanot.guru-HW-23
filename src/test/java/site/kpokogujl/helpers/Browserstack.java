@@ -13,7 +13,7 @@ public class Browserstack {
     public static String
             browserstackLogin = config.browserstackLogin(),
             browserstackPassword = config.browserstackPassword(),
-            browsesrstackUrl = config.browsesrstackUrl(),
+            browserstackUrl = config.browserstackUrl(),
             appUrl = config.appUrl();
 
     public static String videoUrl(String sessionId) {
