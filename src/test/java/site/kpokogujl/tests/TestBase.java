@@ -5,7 +5,8 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
-import site.kpokogujl.drivers.BrowserstackMobileDriver;
+//import site.kpokogujl.drivers.BrowserstackMobileDriver;
+import site.kpokogujl.drivers.LocalMobileDriver;
 import site.kpokogujl.helpers.Attach;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
@@ -20,7 +21,8 @@ public class TestBase {
     public static void setup() {
         addListener("AllureSelenide", new AllureSelenide());
 
-        Configuration.browser = BrowserstackMobileDriver.class.getName();
+//        Configuration.browser = BrowserstackMobileDriver.class.getName();
+        Configuration.browser = LocalMobileDriver.class.getName();
         Configuration.browserSize = null;
     }
 
@@ -38,6 +40,6 @@ public class TestBase {
 
         closeWebDriver();
 
-        Attach.video(sessionId);
+//        Attach.video(sessionId);
     }
 }
