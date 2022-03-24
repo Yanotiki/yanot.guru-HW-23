@@ -9,7 +9,7 @@ public interface TestsConfig extends Config {
     String browserstackPassword();
 
 
-    String browsesrstackUrl();
+    String browserstackUrl();
     String appUrl();
 
 }
