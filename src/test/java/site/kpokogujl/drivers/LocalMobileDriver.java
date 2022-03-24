@@ -36,9 +36,7 @@ public class LocalMobileDriver implements WebDriverProvider {
         options.merge(capabilities);
         options.setAutomationName(AutomationName.ANDROID_UIAUTOMATOR2);
         options.setPlatformName(config.platformName());
-//        options.setDeviceName("RFCR90ZMNQP");
         options.setDeviceName(config.deviceName());
-//        options.setPlatformVersion("11.0");
         options.setCapability(APPLICATION_NAME, "Appium");
         options.setApp(app.getAbsolutePath());
         options.setLocale("en");

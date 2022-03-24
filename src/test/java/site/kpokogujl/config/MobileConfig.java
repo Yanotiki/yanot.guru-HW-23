@@ -2,10 +2,9 @@ package site.kpokogujl.config;
 
 import org.aeonbits.owner.Config;
 
-//@Config.LoadPolicy(Config.LoadType.MERGE)
-//@Config.Sources({"classpath:${device}.properties",
-//                "classpath:config/credentials.properties"})
-@Config.Sources("classpath:${device}.properties")
+@Config.LoadPolicy(Config.LoadType.MERGE)
+@Config.Sources({"classpath:config/${device}.properties",
+                "classpath:config/credentials.properties"})
 public interface MobileConfig extends Config {
 
     @Key("device.name")

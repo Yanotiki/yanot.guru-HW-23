@@ -2,10 +2,13 @@ package site.kpokogujl.tests;
 
 import com.codeborne.selenide.Configuration;
 import io.qameta.allure.selenide.AllureSelenide;
+import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 //import site.kpokogujl.drivers.BrowserstackMobileDriver;
+import site.kpokogujl.config.MobileConfig;
+import site.kpokogujl.drivers.BrowserstackMobileDriver;
 import site.kpokogujl.drivers.LocalMobileDriver;
 import site.kpokogujl.helpers.Attach;
 
@@ -16,13 +19,22 @@ import static site.kpokogujl.helpers.Attach.getSessionId;
 
 
 public class TestBase {
+    static MobileConfig config = ConfigFactory.create(MobileConfig.class, System.getProperties());
 
     @BeforeAll
     public static void setup() {
         addListener("AllureSelenide", new AllureSelenide());
 
-//        Configuration.browser = BrowserstackMobileDriver.class.getName();
-        Configuration.browser = LocalMobileDriver.class.getName();
+        switch (config.device()) {
+            case "local":
+            case "emulator":
+                Configuration.browser = LocalMobileDriver.class.getName();
+                break;
+            case "remote":
+                Configuration.browser = BrowserstackMobileDriver.class.getName();
+                break;
+        }
+
         Configuration.browserSize = null;
     }
 
@@ -40,6 +52,8 @@ public class TestBase {
 
         closeWebDriver();
 
-//        Attach.video(sessionId);
+        if (config.device().contains("remote")) {
+            Attach.video(sessionId);
+        }
     }
 }
