@@ -58,7 +58,7 @@ public class WikipediaAppAndroidTests extends TestBase {
     }
 
     @Test
-    void checkTextOnFirdScreen() {
+    void checkTextOnThirdScreen() {
 
         String textOnScreenThree = "You can make reading lists from articles you want to read later, even when you’re offline. \n" +
                 "Login to your Wikipedia account to sync your reading lists. Join Wikipedia";
@@ -75,7 +75,7 @@ public class WikipediaAppAndroidTests extends TestBase {
     }
 
     @Test
-    void checkTextOnFourScreen() {
+    void checkTextOnFourthScreen() {
 
         String textOnScreenFour = "Help make the app better by letting us know how you use it. Data collected is anonymous. Learn more";
 
