@@ -6,7 +6,6 @@ import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
-//import site.kpokogujl.drivers.BrowserstackMobileDriver;
 import site.kpokogujl.config.MobileConfig;
 import site.kpokogujl.drivers.BrowserstackMobileDriver;
 import site.kpokogujl.drivers.LocalMobileDriver;

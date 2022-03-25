@@ -18,7 +18,6 @@ import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-//import static org.apache.commons.io.FileUtils.copyInputStreamToFile;
 import static org.apache.commons.io.FileUtils.copyInputStreamToFile;
 import static org.openqa.selenium.remote.CapabilityType.APPLICATION_NAME;
 
