@@ -40,6 +40,12 @@ public class TestBase {
     @BeforeEach
     public void startDriver() {
         open();
+
+        Attach.attachAsText("Режим запуска: ", config.device());
+        Attach.attachAsText("Устройство:", config.deviceName());
+        Attach.attachAsText("Веосия приложения:", config.appUrl());
+        Attach.attachAsText("Browserstack URL: ", config.browserstackUrl());
+
     }
 
     @AfterEach
