@@ -91,12 +91,12 @@ public class RegistrationTest extends TestBase {
         });
     }
     @Test
-    @AllureId("7832")
+    @AllureId("9551")
     @DisplayName("RegistrationTest")
     @Owner("allure8")
     void SearchTest() {
         step("Open", () -> {
-            open("https://google.com");
+            open("https://yandex.ru/");
         });
         step("Submit", () -> {
             $("#submit").click();
